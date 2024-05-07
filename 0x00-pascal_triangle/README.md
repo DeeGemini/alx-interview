@@ -26,7 +26,7 @@ This Python script provides a function pascal_triangle(n) that generates Pascal'
 
 # Installation
 >> Clone the repository:
-	git clone https://github.com/yourusername/pascals-triangle.git
+	git clone https://github.com/DeeGemini/0x00-pascals_triangle.git
 >> Change directory to the project folder:
 	cd pascals-triangle
 >> Run the provided example or incorporate the pascal_triangle function into your own Python projects.
