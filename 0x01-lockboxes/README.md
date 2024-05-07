@@ -37,3 +37,6 @@ False
 ## Author
 [Nontuthuzelo Ngwenya (DeeGemini)]
 
+## License
+None
+
