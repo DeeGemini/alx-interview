@@ -1,0 +1,56 @@
+### Pseudo Code
+
+// Initialize Variables
+	// total_size to 0 (for summing file sizes)
+	// status_counts as a dictionary with keys as status codes (200, 301, 400, 401, 403, 404, 405, 500) and values as 0 (for counting status codes)
+	// line_count to 0 (for counting lines processed)
+
+// Define a Function to Print Statistics
+	// Print "Total file size: total_size"
+	// For each key in status_counts in ascending order:
+	// If the value is greater than 0, print "status_code: count"
+
+// Read Input from stdin
+	// Use a loop to read each line from stdin
+
+//For Each Line
+	// Try to match the line with the required format using a regular expression
+	// If the format does not match, skip the line
+	// If the format matches:
+		// Extract the status code and file size
+		// Add the file size to total_size
+	// If the status code is in status_counts, increment its count
+		// Increment line_count
+	// If line_count is a multiple of 10, call the function to print statistics
+
+// Handle Keyboard Interrupt (CTRL + C)
+	// Print the statistics using the defined function
+	// Exit the program
+
+### Detailed Pseudo Code
+
+initialize total_size to 0
+initialize status_counts to {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
+initialize line_count to 0
+
+define function print_statistics():
+    print "Total file size: ", total_size
+    for status_code in sorted(status_counts.keys()):
+        if status_counts[status_code] > 0:
+            print status_code, ": ", status_counts[status_code]
+
+try:
+    while True:
+        read line from stdin
+        if line matches format "<IP Address> - [<date>] \"GET /projects/260 HTTP/1.1\" <status code> <file size>":
+            extract status_code and file_size from line
+            add file_size to total_size
+            if status_code is in status_counts:
+                increment status_counts[status_code]
+            increment line_count
+            if line_count % 10 == 0:
+                print_statistics()
+except KeyboardInterrupt:
+    print_statistics()
+    exit program
+
