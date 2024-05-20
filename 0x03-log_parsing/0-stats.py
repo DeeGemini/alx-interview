@@ -10,12 +10,13 @@ line_count = 0
 
 # Regular expression pattern to match the log line format
 log_pattern = re.compile(
-    r'(?P<ip>\S+) - \[(?P<date>[^\]]+)\] "GET /projects/260 HTTP/1.1" (?P<status>\d{3}) (?P<size>\d+)'
+    r'(?P<ip>\S+) - \[(?P<date>[^\]]+)\] "GET /projects/260 HTTP/1.1" '
+    r'(?P<status>\d{3}) (?P<size>\d+)'
 )
 
 # Define a function to print statistics
 def print_statistics():
-    print("Total file size: {}".format(total_size))
+    print("File size: {}".format(total_size))
     for status_code in sorted(status_counts.keys()):
         if status_counts[status_code] > 0:
             print("{}: {}".format(status_code, status_counts[status_code]))
@@ -51,7 +52,7 @@ try:
                 print_statistics()
 
 except Exception as e:
-    print("An error occurred:", e)
+    print("An error occurred:", e, file=sys.stderr)
 
 # Print final statistics at the end of the input
 print_statistics()
