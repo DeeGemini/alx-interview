@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 0. Prime Game module: Maria and Ben
+"""Prime Game module: Maria and Ben
 """
 
 def isWinner(x, nums):

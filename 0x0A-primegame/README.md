@@ -31,7 +31,7 @@ By grasping these concepts and making use of the recommended resources, you will
 
 ## Author
 - Nontuthuzelo Ngwenya
-- DeeGemini
+- DeeGemini > GitHub
 - zodiactheegemini@gmail.com
 
 ## Licence
